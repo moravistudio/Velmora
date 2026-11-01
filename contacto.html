@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto — Velmora Pastelería</title>
+<meta name="description" content="Velmora: tortas, tartas, postres y bocaditos horneados cada mañana. Pide en línea con delivery el mismo día.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- ===== TICKER (igual en todas las páginas) ===== -->
+<div class="ticker" aria-label="Avisos">
+  <div class="ticker__fila"><span>Horneado hoy</span><span class="ticker__sep">/</span><span>Pedidos hasta las 12:00</span><span class="ticker__sep">/</span><span>Delivery el mismo día</span><span class="ticker__sep">/</span><span>Tortas por encargo</span><span class="ticker__sep">/</span><span>Mantequilla de verdad</span><span class="ticker__sep">/</span><span>Recojo en tienda</span><span class="ticker__sep">/</span><span>Lunes a sábado</span></div>
+</div>
+
+<div class="zona-hero">
+  <!-- ===== HEADER (igual en todas las páginas; cambiar solo aria-current) ===== -->
+  <header class="header contenedor">
+    <a href="index.html" class="logo" aria-label="Velmora pastelería, inicio"><span class="logo__nombre">Velmora</span><span class="logo__sub">pastelería</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html" aria-current="page">Contacto</a>
+    </nav>
+    <div class="header__acciones">
+      <button class="boton-buscar" aria-label="Buscar"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#183D32" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <a href="#" class="boton-carrito"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#F2D879" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.2L20 7H6.2"/><circle cx="9" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></svg><span class="boton-carrito__texto">Carrito</span> <span class="boton-carrito__num">(0)</span></a>
+    </div>
+  </header>
+
+  <section class="cabecera-pagina contenedor">
+    <span class="etiqueta-linea">Contacto</span>
+    <h1>Hablemos <em>de dulce</em></h1>
+    <p>Pedidos, encargos de tortas personalizadas y consultas. Te respondemos el mismo día.</p>
+  </section>
+</div>
+
+<main>
+<!-- ===== FORMULARIO DE ENCARGO + WHATSAPP ===== -->
+<section class="contacto-form">
+  <div class="contenedor contacto-form__inner">
+    <div class="contacto-form__col">
+      <h2 class="contacto__titulo">Cuéntanos <em>tu encargo</em></h2>
+      <!-- FORMULARIO: envío simulado (app.js). Para uso real, conectar con Formspree o WhatsApp -->
+      <form class="formulario" id="form-encargo" action="#" method="post">
+        <div class="formulario__fila">
+          <div class="campo"><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" autocomplete="name" required></div>
+          <div class="campo"><label for="whatsapp">WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" required></div>
+        </div>
+        <div class="formulario__fila">
+          <div class="campo"><label for="fecha">Fecha del encargo</label><input id="fecha" name="fecha" type="date" required></div>
+          <div class="campo"><label for="porciones">Porciones</label><input id="porciones" name="porciones" type="number" min="1" inputmode="numeric" required></div>
+        </div>
+        <div class="campo"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="5"></textarea></div>
+        <button class="boton boton--verde" type="submit">Enviar encargo <span aria-hidden="true">→</span></button>
+      </form>
+      <div class="formulario__ok" id="encargo-ok" hidden>
+        <p class="formulario__ok-titulo">¡Recibido, <em id="ok-nombre"></em>!</p>
+        <p class="formulario__ok-texto">Te escribimos al <strong id="ok-whatsapp"></strong> en 24 h con el diseño y el precio de tu torta.</p>
+        <button class="enlace-subrayado" type="button" id="otro-encargo">Hacer otro encargo</button>
+      </div>
+    </div>
+    <aside class="tarjeta-whatsapp">
+      <span class="etiqueta-linea">Más rápido</span>
+      <p class="tarjeta-whatsapp__titulo">¿Prefieres <em>escribirnos?</em></p>
+      <p class="tarjeta-whatsapp__desc">Cuéntanos tu idea por WhatsApp y te cotizamos el diseño y el precio en 24 h.</p>
+<a href="https://wa.me/51999999999" target="_blank" rel="noopener" class="boton boton--verde">Escribir por WhatsApp <span aria-hidden="true">→</span></a>
+      <span class="tarjeta-whatsapp__dato">+51 999 999 999</span>
+    </aside>
+  </div>
+</section>
+
+<!-- ===== DIRECCIÓN, HORARIO Y MAPA ===== -->
+<section class="carta contacto-datos">
+  <div class="contenedor carta__inner">
+    <div class="carta__lista">
+      <div class="carta__cabecera">
+        <h2 class="carta__titulo">Pasa <em>por aquí</em></h2>
+      </div>
+      <div class="carta__columnas">
+        <div class="carta__grupo">
+          <span class="carta__grupo-titulo">Visítanos</span>
+          <div class="carta__item"><span class="carta__item-nombre">Av. Larco 123, Miraflores · Lima</span></div>
+          <div class="carta__item"><span class="carta__item-nombre">Lun a sáb</span><span class="carta__puntos"></span><span class="carta__precio">7:00 a. m. – 8:00 p. m.</span></div>
+          <div class="carta__item"><span class="carta__item-nombre">Pedidos del día</span><span class="carta__puntos"></span><span class="carta__precio">hasta las 12:00</span></div>
+        </div>
+        <div class="carta__grupo">
+          <span class="carta__grupo-titulo">Escríbenos</span>
+          <a href="https://wa.me/51999999999" target="_blank" rel="noopener" class="carta__item"><span class="carta__item-nombre">+51 999 999 999</span></a>
+          <a href="mailto:hola@velmora.pe" class="carta__item"><span class="carta__item-nombre">hola@velmora.pe</span></a>
+          <div class="carta__item"><span class="carta__item-nombre">Respuesta</span><span class="carta__puntos"></span><span class="carta__precio">el mismo día</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="contacto-datos__mapa">
+      <!-- MAPA: Google Maps embebido; si cambia la dirección, cambiar el texto después de q= -->
+      <div class="foto mapa"><iframe title="Mapa de Velmora Pastelería" src="https://maps.google.com/maps?q=Av.+Larco+123,+Miraflores,+Lima&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER (igual en todas las páginas) ===== -->
+<footer class="footer">
+  <div class="contenedor footer__inner">
+    <div class="footer__cols">
+      <div class="footer__col"><strong>Visítanos</strong><span>Av. Larco 123, Miraflores · Lima</span><span>Lun a sáb · 7:00 a. m. – 8:00 p. m.</span></div>
+      <div class="footer__col"><strong>Escríbenos</strong><a href="https://wa.me/51999999999">+51 999 999 999</a><a href="mailto:hola@velmora.pe">hola@velmora.pe</a></div>
+      <div class="footer__col"><strong>Síguenos</strong><a href="#">Instagram</a><a href="#">TikTok</a></div>
+      <div class="footer__col"><strong>Páginas</strong><a href="index.html">Inicio</a><a href="productos.html">Productos</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
+    </div>
+    <div class="footer__marca" aria-hidden="true">Velmora</div>
+    <div class="footer__legal"><span>© 2026 Velmora Pastelería</span><span>Términos · Privacidad · Libro de reclamaciones</span></div>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

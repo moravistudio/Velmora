@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velmora Pastelería — Dulce de verdad</title>
+<meta name="description" content="Velmora: tortas, tartas, postres y bocaditos horneados cada mañana. Pide en línea con delivery el mismo día.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== TICKER (igual en todas las páginas) ===== -->
+<div class="ticker" aria-label="Avisos">
+  <div class="ticker__fila"><span>Horneado hoy</span><span class="ticker__sep">/</span><span>Pedidos hasta las 12:00</span><span class="ticker__sep">/</span><span>Delivery el mismo día</span><span class="ticker__sep">/</span><span>Tortas por encargo</span><span class="ticker__sep">/</span><span>Mantequilla de verdad</span><span class="ticker__sep">/</span><span>Recojo en tienda</span><span class="ticker__sep">/</span><span>Lunes a sábado</span></div>
+</div>
+
+<div class="zona-hero">
+  <!-- ===== HEADER (igual en todas las páginas; cambiar solo aria-current) ===== -->
+  <header class="header contenedor">
+    <a href="index.html" class="logo" aria-label="Velmora pastelería, inicio"><span class="logo__nombre">Velmora</span><span class="logo__sub">pastelería</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html" aria-current="page">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="header__acciones">
+      <button class="boton-buscar" aria-label="Buscar"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#183D32" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <a href="#" class="boton-carrito"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#F2D879" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.2L20 7H6.2"/><circle cx="9" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></svg><span class="boton-carrito__texto">Carrito</span> <span class="boton-carrito__num">(0)</span></a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero contenedor">
+    <div class="hero__texto">
+      <span class="etiqueta-linea">Pastelería artesanal</span>
+      <h1 class="hero__titulo">Dulce<br>de <em>verdad.</em></h1>
+      <p class="hero__desc">Tortas, tartas y bocaditos que se hornean cada mañana a dos cuadras de tu casa. Sin pretensiones, con mucho sabor.</p>
+      <div class="hero__ctas">
+        <a href="#carta" class="boton boton--verde">Ver la carta de hoy <span aria-hidden="true">→</span></a>
+        <a href="#encargos" class="enlace-subrayado">o encarga tu torta</a>
+      </div>
+      <div class="hero__datos"><span>Delivery el mismo día</span><span>Recojo en tienda</span><span>Tarjeta · Yape · Plin</span></div>
+    </div>
+
+    <div class="hero__visual">
+      <!-- FOTO: img/hero.jpg -->
+      <div class="foto hero__foto">
+        <span class="foto__etiqueta">Foto principal · producto estrella · 6:5</span>
+        <img src="img/hero.jpg" alt="Producto estrella de Velmora" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()">
+      </div>
+      <a href="productos.html" class="torta-dia">
+        <!-- FOTO: img/torta-del-dia.jpg -->
+        <span class="foto" style="display:block"><img src="img/torta-del-dia.jpg" alt="Torta del día" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></span>
+        <span class="torta-dia__pie"><strong>Torta del día</strong><span>S/ 60</span></span>
+      </a>
+      <svg class="sello" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="aro-sup" d="M29,100 a71,71 0 0,1 142,0"/><path id="aro-inf" d="M18.5,100 a81.5,81.5 0 0,0 163,0"/></defs><circle cx="100" cy="100" r="98" fill="#183D32"/><g font-family="Bricolage Grotesque, sans-serif" font-size="14.5" font-weight="600" letter-spacing="2.2" fill="#F2D879" text-anchor="middle"><text><textPath href="#aro-sup" startOffset="50%">PEDIDOS PARA HOY</textPath></text><text><textPath href="#aro-inf" startOffset="50%">HASTA LAS 12:00</textPath></text></g><circle cx="23.5" cy="100" r="2.2" fill="#F2D879"/><circle cx="176.5" cy="100" r="2.2" fill="#F2D879"/><text x="100" y="96" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="30" fill="#F6F1E5">hoy</text><text x="100" y="124" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="22" fill="#F6F1E5">S/ 60</text></svg>
+    </div>
+  </section>
+</div>
+
+<main>
+<!-- ===== FRANJA DE PALABRAS ===== -->
+<div class="franja-palabras" aria-hidden="true">
+  <div class="franja-palabras__fila">
+    <div class="franja-palabras__set"><span class="palabra--solida">Tortas</span><span class="palabra--cursiva">tartas</span><span class="palabra--contorno">postres</span><span class="palabra--solida">bocaditos</span><span class="palabra--cursiva">panes dulces</span></div>
+    <div class="franja-palabras__set"><span class="palabra--solida">Tortas</span><span class="palabra--cursiva">tartas</span><span class="palabra--contorno">postres</span><span class="palabra--solida">bocaditos</span><span class="palabra--cursiva">panes dulces</span></div>
+    <div class="franja-palabras__set"><span class="palabra--solida">Tortas</span><span class="palabra--cursiva">tartas</span><span class="palabra--contorno">postres</span><span class="palabra--solida">bocaditos</span><span class="palabra--cursiva">panes dulces</span></div>
+  </div>
+</div>
+
+<!-- ===== LA CARTA DE HOY ===== -->
+<section id="carta" class="carta">
+  <div class="contenedor carta__inner">
+    <div class="carta__lista">
+      <div class="carta__cabecera">
+        <h2 class="carta__titulo">La carta <em>de hoy</em></h2>
+        <span class="carta__nota">Actualizada a las 7:00 a. m.</span>
+      </div>
+      <div class="carta__columnas">
+        <div class="carta__grupo">
+          <span class="carta__grupo-titulo">Tortas enteras</span>
+          <a href="productos.html" class="carta__item"><span class="carta__item-nombre">Chocolate fudge</span><span class="carta__puntos"></span><span class="carta__precio">S/ 75</span></a>
+          <a href="productos.html" class="carta__item"><span class="carta__item-nombre">Tres leches</span><span class="carta__puntos"></span><span class="carta__precio">S/ 60</span></a>
+          <a href="productos.html" class="carta__item"><span class="carta__item-nombre">Selva negra</span><span class="carta__puntos"></span><span class="carta__precio">S/ 78</span></a>
+          <a href="productos.html" class="carta__item"><span class="carta__item-nombre">Zanahoria y nueces</span><span class="carta__puntos"></span><span class="carta__precio">S/ 68</span></a>
+        </div>
+        <div class="carta__grupo">
+          <span class="carta__grupo-titulo">Porciones y bocaditos</span>
+          <a href="productos.html" class="carta__item"><span class="carta__item-nombre">Pie de limón</span><span class="carta__puntos"></span><span class="carta__precio">S/ 9</span></a>
+          <a href="productos.html" class="carta__item"><span class="carta__item-nombre">Cheesecake de fresa</span><span class="carta__puntos"></span><span class="carta__precio">S/ 11</span></a>
+          <a href="productos.html" class="carta__item"><span class="carta__item-nombre">Alfajores</span><span class="carta__puntos"></span><span class="carta__precio">S/ 32</span></a>
+          <a href="productos.html" class="carta__item"><span class="carta__item-nombre">Ciento de bocaditos</span><span class="carta__puntos"></span><span class="carta__precio">S/ 95</span></a>
+        </div>
+      </div>
+      <a href="productos.html" class="boton boton--mantequilla">Ver todos los productos <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="carta__vitrina">
+      <!-- FOTO: img/vitrina.jpg -->
+      <div class="foto foto--arco"><span class="foto__etiqueta">Foto · vitrina del día · 3:4</span><img src="img/vitrina.jpg" alt="La vitrina de Velmora esta mañana" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div>
+      <span class="carta__vitrina-nota">Así se ve la vitrina esta mañana.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORÍAS EN FRANJAS ===== -->
+<section aria-label="Categorías">
+  <a href="productos.html#tortas" class="categoria categoria--salvia"><div class="contenedor categoria__inner">
+    <span class="categoria__num">01</span><span class="categoria__nombre">Tortas</span><span class="categoria__desc">Enteras, para compartir. De 8 a 30 porciones.</span>
+    <span class="foto"><img src="img/categoria-tortas.jpg" alt="" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></span><span class="categoria__flecha" aria-hidden="true">→</span>
+  </div></a>
+  <a href="productos.html#tartas" class="categoria categoria--marfil"><div class="contenedor categoria__inner">
+    <span class="categoria__num">02</span><span class="categoria__nombre categoria__nombre--cursiva">Tartas y pies</span><span class="categoria__desc">Limón, manzana, frutas de estación.</span>
+    <span class="foto"><img src="img/categoria-tartas.jpg" alt="" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></span><span class="categoria__flecha" aria-hidden="true">→</span>
+  </div></a>
+  <a href="productos.html#postres" class="categoria categoria--mantequilla"><div class="contenedor categoria__inner">
+    <span class="categoria__num">03</span><span class="categoria__nombre">Postres</span><span class="categoria__desc">Porciones para el antojo de hoy.</span>
+    <span class="foto"><img src="img/categoria-postres.jpg" alt="" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></span><span class="categoria__flecha" aria-hidden="true">→</span>
+  </div></a>
+  <a href="productos.html#bocaditos" class="categoria categoria--verde"><div class="contenedor categoria__inner">
+    <span class="categoria__num">04</span><span class="categoria__nombre categoria__nombre--cursiva">Bocaditos</span><span class="categoria__desc">Por ciento, para reuniones y eventos.</span>
+    <span class="foto"><img src="img/categoria-bocaditos.jpg" alt="" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></span><span class="categoria__flecha" aria-hidden="true">→</span>
+  </div></a>
+</section>
+
+<!-- ===== ENCARGOS ===== -->
+<section id="encargos" class="encargos">
+  <div class="contenedor encargos__inner">
+    <div class="encargos__visual">
+      <!-- FOTO: img/encargos.jpg -->
+      <div class="foto"><img src="img/encargos.jpg" alt="Torta personalizada" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div>
+      <div class="encargos__etiqueta">Tu nombre<br><em>aquí arriba</em></div>
+    </div>
+    <div class="encargos__texto">
+      <h2 class="encargos__titulo">¿Tu torta?<br><em>Tu idea.</em></h2>
+      <div class="pasos">
+        <div class="paso"><span class="paso__num">1</span><strong>Nos cuentas</strong><span>Fecha, porciones y estilo.</span></div>
+        <div class="paso"><span class="paso__num">2</span><strong>Te cotizamos</strong><span>Diseño y precio en 24 h.</span></div>
+        <div class="paso"><span class="paso__num">3</span><strong>La horneamos</strong><span>Recojo o delivery.</span></div>
+      </div>
+      <a href="contacto.html" class="boton boton--verde">Cotizar mi torta <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOSOTROS (adelanto) ===== -->
+<section class="nosotros">
+  <div class="contenedor nosotros__inner">
+    <p class="nosotros__cita">“Aquí no hay recetas secretas: hay mantequilla de verdad, horno a las cinco de la mañana y ganas de que vuelvas.”</p>
+    <div class="nosotros__firma"><span>— Valeria Montes, fundadora de Velmora</span><a href="nosotros.html">Nuestra historia →</a></div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER (igual en todas las páginas) ===== -->
+<footer class="footer">
+  <div class="contenedor footer__inner">
+    <div class="footer__cols">
+      <div class="footer__col"><strong>Visítanos</strong><span>Av. Larco 123, Miraflores · Lima</span><span>Lun a sáb · 7:00 a. m. – 8:00 p. m.</span></div>
+      <div class="footer__col"><strong>Escríbenos</strong><a href="https://wa.me/51999999999">+51 999 999 999</a><a href="mailto:hola@velmora.pe">hola@velmora.pe</a></div>
+      <div class="footer__col"><strong>Síguenos</strong><a href="#">Instagram</a><a href="#">TikTok</a></div>
+      <div class="footer__col"><strong>Páginas</strong><a href="index.html">Inicio</a><a href="productos.html">Productos</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
+    </div>
+    <div class="footer__marca" aria-hidden="true">Velmora</div>
+    <div class="footer__legal"><span>© 2026 Velmora Pastelería</span><span>Términos · Privacidad · Libro de reclamaciones</span></div>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

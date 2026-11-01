@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nosotros — Velmora Pastelería</title>
+<meta name="description" content="Velmora: tortas, tartas, postres y bocaditos horneados cada mañana. Pide en línea con delivery el mismo día.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- ===== TICKER (igual en todas las páginas) ===== -->
+<div class="ticker" aria-label="Avisos">
+  <div class="ticker__fila"><span>Horneado hoy</span><span class="ticker__sep">/</span><span>Pedidos hasta las 12:00</span><span class="ticker__sep">/</span><span>Delivery el mismo día</span><span class="ticker__sep">/</span><span>Tortas por encargo</span><span class="ticker__sep">/</span><span>Mantequilla de verdad</span><span class="ticker__sep">/</span><span>Recojo en tienda</span><span class="ticker__sep">/</span><span>Lunes a sábado</span></div>
+</div>
+
+<div class="zona-hero">
+  <!-- ===== HEADER (igual en todas las páginas; cambiar solo aria-current) ===== -->
+  <header class="header contenedor">
+    <a href="index.html" class="logo" aria-label="Velmora pastelería, inicio"><span class="logo__nombre">Velmora</span><span class="logo__sub">pastelería</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html" aria-current="page">Nosotros</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="header__acciones">
+      <button class="boton-buscar" aria-label="Buscar"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#183D32" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <a href="#" class="boton-carrito"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#F2D879" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.2L20 7H6.2"/><circle cx="9" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></svg><span class="boton-carrito__texto">Carrito</span> <span class="boton-carrito__num">(0)</span></a>
+    </div>
+  </header>
+
+  <section class="cabecera-pagina contenedor">
+    <span class="etiqueta-linea">Nosotros</span>
+    <h1>Somos <em>Velmora</em></h1>
+    <p>Una pastelería con recetas propias, horno temprano y precios justos.</p>
+  </section>
+</div>
+
+<main>
+<!-- ===== HISTORIA ===== -->
+<section class="historia">
+  <div class="contenedor historia__inner">
+    <div class="historia__visual">
+      <!-- FOTO: img/nosotros.jpg -->
+      <div class="foto foto--arco"><span class="foto__etiqueta">Foto · el local o el equipo · 4:5</span><img src="img/nosotros.jpg" alt="El equipo de Velmora en su local" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div>
+    </div>
+    <div class="historia__texto">
+      <h2 class="historia__titulo">Horno a las <em>cinco.</em></h2>
+      <div class="historia__cuerpo">
+        <p>Velmora empezó en una cocina pequeña de Miraflores, con tres recetas de la familia y un horno que no se apagaba. Los vecinos empezaron a volver por la tarta de limón, y después por todo lo demás.</p>
+        <p>Hoy somos un equipo de siete personas y seguimos haciendo lo mismo: levantarnos temprano, usar mantequilla de verdad y hornear lo que vamos a vender ese día. Si algo no sale como queremos, no sale a la vitrina.</p>
+      </div>
+      <a href="productos.html" class="boton boton--verde">Ver los productos <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VALORES ===== -->
+<section class="valores">
+  <div class="contenedor valores__inner">
+    <h2 class="valores__titulo">Lo que <em>no se negocia</em></h2>
+    <div class="valores__lista">
+      <div class="valor"><span class="valor__num">01</span><strong>Ingredientes de verdad</strong><span>Mantequilla, huevos frescos y fruta de estación. Sin esencias ni mezclas listas.</span></div>
+      <div class="valor"><span class="valor__num">02</span><strong>Horneado hoy</strong><span>Lo que ves en la vitrina salió del horno esta mañana, no ayer.</span></div>
+      <div class="valor"><span class="valor__num">03</span><strong>Precio justo</strong><span>El precio que ves es el que pagas. Sin recargos escondidos.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CITA ===== -->
+<section class="nosotros">
+  <div class="contenedor nosotros__inner">
+    <p class="nosotros__cita">“Aquí no hay recetas secretas: hay mantequilla de verdad, horno a las cinco de la mañana y ganas de que vuelvas.”</p>
+    <div class="nosotros__firma"><span>— Valeria Montes, fundadora de Velmora</span><a href="contacto.html">Haz tu encargo →</a></div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER (igual en todas las páginas) ===== -->
+<footer class="footer">
+  <div class="contenedor footer__inner">
+    <div class="footer__cols">
+      <div class="footer__col"><strong>Visítanos</strong><span>Av. Larco 123, Miraflores · Lima</span><span>Lun a sáb · 7:00 a. m. – 8:00 p. m.</span></div>
+      <div class="footer__col"><strong>Escríbenos</strong><a href="https://wa.me/51999999999">+51 999 999 999</a><a href="mailto:hola@velmora.pe">hola@velmora.pe</a></div>
+      <div class="footer__col"><strong>Síguenos</strong><a href="#">Instagram</a><a href="#">TikTok</a></div>
+      <div class="footer__col"><strong>Páginas</strong><a href="index.html">Inicio</a><a href="productos.html">Productos</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
+    </div>
+    <div class="footer__marca" aria-hidden="true">Velmora</div>
+    <div class="footer__legal"><span>© 2026 Velmora Pastelería</span><span>Términos · Privacidad · Libro de reclamaciones</span></div>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
