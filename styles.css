@@ -518,3 +518,8 @@ a, button, summary, label, [role="button"] { -webkit-tap-highlight-color: transp
 .nav { scrollbar-width: none; -ms-overflow-style: none; }
 .nav::-webkit-scrollbar { display: none; }
 .nav a.is-press { background: var(--verde); color: var(--mantequilla); border-color: var(--verde); }
+
+/* Menú en celular: la barra de desplazamiento del navegador (la línea blanca bajo los botones) queda fuera del área visible, aunque el navegador ignore scrollbar-width. */
+@media (max-width: 600px) {
+  .nav { padding-bottom: 16px; margin-bottom: -12px; clip-path: inset(0 0 12px 0); }
+}
