@@ -58,7 +58,7 @@ body { margin: 0; font-family: var(--texto); color: var(--verde); background: va
 main, footer, .franja-palabras, .ticker { display: block; overflow-x: clip; }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
-a:hover { opacity: .85; }
+@media (hover: hover) { a:hover { opacity: .85; } }
 h1, h2, h3, p { margin: 0; }
 button, input { font-family: inherit; }
 .contenedor { max-width: var(--ancho); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
@@ -68,7 +68,7 @@ button, input { font-family: inherit; }
 
 /* ---------- 3. COMPONENTES ---------- */
 .boton { display: inline-flex; align-items: center; gap: 14px; font-family: var(--display); font-size: 18px; font-weight: 600; padding: 20px 30px; border-radius: 999px; text-decoration: none; border: none; cursor: pointer; transition: transform .2s ease, filter .2s ease; }
-.boton:hover { opacity: 1; transform: translateY(-2px); filter: brightness(1.06); }
+@media (hover: hover) { .boton:hover { opacity: 1; transform: translateY(-2px); filter: brightness(1.06); } }
 .boton--verde { background: var(--boton-verde); color: var(--mantequilla); box-shadow: var(--sombra-boton-verde); }
 .boton--mantequilla { background: var(--boton-mantequilla); color: var(--verde); box-shadow: var(--sombra-boton-mantequilla); }
 .enlace-subrayado { font-size: 15px; font-weight: 700; text-decoration: none; padding: 6px 0; border-bottom: 2px solid currentColor; }
@@ -127,7 +127,7 @@ button, input { font-family: inherit; }
 .franja-palabras { background: var(--verde); white-space: nowrap; padding: 28px 0; border-top: 6px solid var(--salvia); }
 .franja-palabras__fila { display: flex; width: max-content; align-items: center; animation: franja-correr 40s linear infinite; font-family: var(--display); font-weight: 800; font-size: clamp(48px, 7vw, 104px); letter-spacing: -0.04em; line-height: 1; }
 .franja-palabras__set { display: flex; gap: 48px; align-items: center; padding-right: 48px; flex: none; }
-.franja-palabras:hover .franja-palabras__fila { animation-play-state: paused; }
+@media (hover: hover) { .franja-palabras:hover .franja-palabras__fila { animation-play-state: paused; } }
 @keyframes franja-correr { from { transform: translateX(0); } to { transform: translateX(-33.3333%); } }
 @media (prefers-reduced-motion: reduce) { .franja-palabras__fila { animation: none; } }
 .palabra--solida { color: var(--marfil); }
@@ -156,12 +156,12 @@ button, input { font-family: inherit; }
 
 /* ---------- 9. CATEGORÍAS EN FRANJAS ---------- */
 .categoria { display: block; text-decoration: none; }
-.categoria:hover { opacity: 1; }
+@media (hover: hover) { .categoria:hover { opacity: 1; } }
 .categoria__inner { padding-top: 36px; padding-bottom: 36px; display: flex; flex-wrap: wrap; align-items: center; gap: 32px; }
 .categoria__num { font-family: var(--display); font-size: 22px; font-weight: 800; width: 56px; }
 .categoria__nombre { flex: 1 1 360px; font-family: var(--display); font-size: clamp(48px, 7vw, 112px); font-weight: 800; letter-spacing: -0.05em; line-height: 0.9; transition: transform .25s ease; }
 .categoria__nombre--cursiva { font-family: var(--cursiva); font-style: italic; font-weight: 400; letter-spacing: -0.04em; line-height: 0.95; }
-.categoria:hover .categoria__nombre { transform: translateX(10px); }
+@media (hover: hover) { .categoria:hover .categoria__nombre { transform: translateX(10px); } }
 .categoria__desc { flex: 0 1 280px; font-size: 16px; line-height: 1.6; }
 .categoria .foto { width: 124px; height: 124px; flex: none; border-radius: 16px; }
 .categoria__flecha { font-size: 36px; }
@@ -347,7 +347,7 @@ button, input { font-family: inherit; }
 .tarjeta__foto { display: block; aspect-ratio: 4 / 5; border-radius: var(--arco); box-shadow: 0 30px 50px -28px rgba(24, 61, 50, 0.55); margin-bottom: 10px; transition: transform .25s ease; }
 .tarjeta:nth-child(odd) .tarjeta__foto { transform: rotate(-1.5deg); }
 .tarjeta:nth-child(even) .tarjeta__foto { transform: rotate(1.2deg); }
-.tarjeta:hover .tarjeta__foto { transform: rotate(0deg) translateY(-4px); }
+@media (hover: hover) { .tarjeta:hover .tarjeta__foto { transform: rotate(0deg) translateY(-4px); } }
 .tarjeta__foto .foto__etiqueta { white-space: normal; text-align: center; width: 80%; bottom: 40px; }
 .tarjeta__nombre { font-size: 20px; font-weight: 700; line-height: 1.2; }
 .tarjeta__detalle { font-size: 14px; line-height: 1.5; color: var(--texto-secundario); }
@@ -372,7 +372,7 @@ button, input { font-family: inherit; }
 /* Cantidad */
 .cant { display: inline-flex; align-items: center; gap: 4px; margin-top: 8px; border: 1.5px solid rgba(24, 61, 50, 0.35); border-radius: 999px; padding: 2px; }
 .cant button { width: 32px; height: 32px; border: 0; border-radius: 999px; background: transparent; color: var(--verde); font-size: 18px; font-weight: 700; cursor: pointer; }
-.cant button:hover { background: var(--verde); color: var(--mantequilla); }
+@media (hover: hover) { .cant button:hover { background: var(--verde); color: var(--mantequilla); } }
 .cant span { min-width: 28px; text-align: center; font-weight: 700; }
 .cant--grande { margin-top: 0; align-self: flex-start; }
 .cant--grande button { width: 44px; height: 44px; font-size: 22px; }
@@ -477,7 +477,8 @@ dialog.buscar-pop::backdrop { background: rgba(48, 45, 41, 0.6); }
 .buscar-pop__lista { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; max-height: 60vh; overflow: auto; }
 .buscar-pop__vacio { padding: 16px 8px; font-size: 15px; line-height: 1.5; color: var(--texto-secundario); }
 .buscar-res { width: 100%; display: flex; align-items: center; gap: 14px; text-align: left; padding: 8px; border: 0; border-radius: 16px; background: transparent; color: var(--verde); cursor: pointer; font-family: var(--texto); }
-.buscar-res:hover, .buscar-res:focus-visible { background: rgba(24, 61, 50, 0.08); }
+.buscar-res:focus-visible { background: rgba(24, 61, 50, 0.08); }
+@media (hover: hover) { .buscar-res:hover { background: rgba(24, 61, 50, 0.08); } }
 .buscar-res img { width: 56px; height: 56px; object-fit: cover; border-radius: 12px; flex: none; background: var(--placeholder-foto); }
 .buscar-res span { display: flex; flex-direction: column; gap: 2px; }
 .buscar-res strong { font-family: var(--display); font-size: 18px; font-weight: 700; }
@@ -499,3 +500,11 @@ dialog.modal--ancho .modal__caja { padding-top: 76px; }
   .ficha__compra { padding: 14px 0 18px; gap: 14px; }
   .ficha__compra .boton { padding: 16px 20px; font-size: 16px; }
 }
+
+/* ---------- 15. CELULAR: TOQUES ---------- */
+/* Sin el resalte rectangular que el navegador pinta al tocar (ignoraba los bordes redondeados) y sin hover pegado: los efectos de hover solo existen donde hay puntero. */
+a, button, summary, label, [role="button"] { -webkit-tap-highlight-color: transparent; }
+/* Respuesta al toque con la misma forma redondeada de cada botón */
+.nav a:active { background: rgba(24, 61, 50, 0.14); }
+.nav a[aria-current="page"]:active { background: var(--verde); }
+.boton:active { transform: scale(0.97); }
