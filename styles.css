@@ -240,7 +240,7 @@ button, input { font-family: inherit; }
   .torta-dia__pie strong { font-size: 13px; }
   .boton-carrito__texto { display: none; }
   .header { gap: 16px; }
-  .hero__datos { flex-direction: column; gap: 6px; }
+  .hero__datos { flex-direction: column; gap: 6px; border-top: none; padding-top: 0; }
   .hero__datos span { padding: 0; border-left: none; }
   .sello { width: 112px; height: 112px; right: -4px; top: 10px; }
   .carta__inner, .encargos__inner, .nosotros__inner { padding-top: 80px; padding-bottom: 80px; gap: 48px; }
@@ -513,3 +513,8 @@ a, button, summary, label, [role="button"] { -webkit-tap-highlight-color: transp
 .nav a, .boton, .boton-carrito, .boton-buscar { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; touch-action: manipulation; }
 .nav a:focus { outline: none; }
 .nav a:focus-visible { outline: 2px solid var(--verde); outline-offset: 2px; border-radius: 999px; }
+
+/* Menú en celular: sin barra de desplazamiento visible (la línea blanca al deslizar) y respuesta inmediata al tocar. */
+.nav { scrollbar-width: none; -ms-overflow-style: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a.is-press { background: var(--verde); color: var(--mantequilla); border-color: var(--verde); }

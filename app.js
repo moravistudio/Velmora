@@ -391,5 +391,15 @@
     else if (estado.cat !== 'todos') $('#filtros').scrollIntoView();
   }
 
+
+  /* Menú: el botón se marca en el mismo instante del toque, sin esperar a que cargue la otra página. */
+  document.querySelectorAll('.nav a').forEach(function (a) {
+    a.addEventListener('pointerdown', function () { a.classList.add('is-press'); });
+    ['pointercancel', 'pointerleave', 'pointerup'].forEach(function (ev) {
+      a.addEventListener(ev, function () { setTimeout(function () { if (!a.dataset.va) a.classList.remove('is-press'); }, 0); });
+    });
+    a.addEventListener('click', function () { a.dataset.va = '1'; a.classList.add('is-press'); });
+  });
+  window.addEventListener('pageshow', function () { document.querySelectorAll('.nav a').forEach(function (a) { a.classList.remove('is-press'); delete a.dataset.va; }); });
   pintarCarrito();
 })();
