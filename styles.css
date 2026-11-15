@@ -523,3 +523,7 @@ a, button, summary, label, [role="button"] { -webkit-tap-highlight-color: transp
 @media (max-width: 600px) {
   .nav { padding-bottom: 16px; margin-bottom: -12px; clip-path: inset(0 0 12px 0); }
 }
+
+/* Firma de Moravi Studio (mismo texto que Libraica) */
+.firma-moravi { margin: -24px 0 0; text-align: center; font-size: 12px; line-height: 1.5; color: rgba(246, 241, 229, 0.8); }
+.firma-moravi a { color: var(--marfil); text-decoration: underline; text-underline-offset: 2px; }
